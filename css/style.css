@@ -1,0 +1,290 @@
+/* Variables */
+/* Universal Styles */
+html, body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f1fdfd;
+  font-family: "Source Serif Pro", serif;
+}
+
+#container {
+  width: 300%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.scroll {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Side and main nav bars */
+#sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 75px;
+  z-index: 2;
+  background-color: #f1fdfd;
+  border-right: #2e2e45 solid;
+  border-width: 1px;
+}
+#sidebar p {
+  text-align: center;
+  font-weight: 500;
+  margin-left: 5px;
+  color: #2e2e45;
+  transform: rotate(270deg);
+  font-size: 3rem;
+}
+#sidebar #sidebar--logo {
+  margin: 5px;
+}
+
+#navbar {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  border-bottom: #2e2e45 solid;
+  background-color: #f1fdfd;
+  border-width: 1px;
+}
+#navbar p {
+  margin: 0 3% 0 3%;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Main */
+#main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  /* Line through titles on hover */
+}
+#main #main--title {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#main #main--title img {
+  width: 50%;
+  margin: 0 0 2% 0;
+  padding: 0;
+}
+#main #main--title h2 {
+  color: #2e2e45;
+  margin: 0;
+  padding: 0 0 5% 0;
+}
+#main #main--title #whiskey {
+  opacity: 0.1;
+  width: 15%;
+  position: absolute;
+  transform: rotateZ(330deg);
+}
+#main #main--title h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+  transition: all 0.4s;
+}
+#main #main--hero {
+  width: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main #main--hero #main--jack {
+  height: 60%;
+  margin: 0;
+  padding: 0 10px 10px 0;
+  opacity: 0.8;
+  border-bottom: #2e2e45 solid;
+  border-right: #2e2e45 solid;
+  border-width: 2px;
+}
+#main #main--hero #main--titles {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  margin-right: -125px;
+  color: #2e2e45;
+}
+#main #main--hero #main--titles h1 {
+  letter-spacing: 13px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3rem;
+}
+#main .line {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+#main .line:before, #main .line:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #2e2e45;
+}
+#main .line:before {
+  left: -2.5px;
+}
+#main .line:after {
+  right: 2.5px;
+  background: #2e2e45;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+#main .line:hover:before {
+  background: #2e2e45;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+#main .line:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+/* About */
+#about {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#about #about--title {
+  padding: 0;
+  margin: 10% 0 7% 0;
+  align-self: center;
+  font-size: 2rem;
+  font-weight: 400;
+}
+#about #about--content {
+  width: 100%;
+  height: 70%;
+  margin: 0 0 5% 0;
+  display: flex;
+  justify-content: center;
+}
+#about #about--content #about--whiskey {
+  padding: 0;
+  margin: 0;
+}
+#about #about--content #about--whiskey img {
+  width: 700px;
+  margin: 5% 0 0 -3%;
+}
+#about #about--content #about--text {
+  padding: 15px 50px 15px 50px;
+  max-width: 500px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2e45;
+}
+#about #about--content #about--text p {
+  line-height: 45px;
+  font-weight: 100;
+  font-size: 1.5rem;
+  color: #f1fdfd;
+}
+#about #about--content #about--text #about--text-comfort {
+  text-align: center;
+  margin: 10% 0 5% 0;
+  font-size: 3.5rem;
+  font-family: "Oooh Baby", cursive;
+  font-weight: 100;
+  opacity: 0.5;
+  color: #f1fdfd;
+}
+#about #about--content #about--text #about--text--Drink {
+  text-align: center;
+  margin: 5% 0 5% 0;
+  font-size: 3.5rem;
+  letter-spacing: 5px;
+  font-family: "Oooh Baby", cursive;
+  font-weight: 100;
+  opacity: 0.5;
+  color: #f1fdfd;
+}
+#about #about--content #about--jack {
+  padding: 0;
+  margin: 2% -5% 0 0;
+}
+#about #about--content #about--jack img {
+  width: 300px;
+  padding: 15px 0 0 15px;
+  opacity: 1;
+  border-top: #2e2e45 solid;
+  border-left: #2e2e45 solid;
+  border-width: 2px;
+}
+
+/* Reviews */
+#reviews {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#reviews #review--content {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reviews #review--content img {
+  width: 40%;
+}
+
+/* Purchase */
+#purchase {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: red;
+}/*# sourceMappingURL=style.css.map */
