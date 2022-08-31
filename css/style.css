@@ -194,7 +194,7 @@ html, body {
   margin: 10% 0 7% 0;
   align-self: center;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
 }
 #about #about--content {
   width: 100%;
@@ -264,27 +264,135 @@ html, body {
 #reviews {
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
-}
-#reviews #review--content {
-  width: 100%;
-  height: 100%;
-  margin: 0;
+  margin: 1% 0 0 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#reviews #review--content img {
-  width: 40%;
+#reviews #review--content {
+  width: 60%;
+  height: 80%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+#reviews #review--content #review--content > div {
+  background-color: #2e2e45;
+}
+#reviews .div1 {
+  grid-area: 1/1/2/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: #2e2e45 solid;
+  border-right: #2e2e45 solid;
+  border-width: 0.25px;
+}
+#reviews .div1 p {
+  font-size: 3.5rem;
+  font-family: "Oooh Baby", cursive;
+  font-weight: 300;
+}
+#reviews .div2 {
+  grid-area: 1/2/2/3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: #2e2e45 solid;
+  border-left: #2e2e45 solid;
+  border-width: 0.25px;
+}
+#reviews .div2 img {
+  width: 392px;
+  opacity: 0.8;
+}
+#reviews .div3 {
+  grid-area: 2/1/3/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: #2e2e45 solid;
+  border-top: #2e2e45 solid;
+  border-width: 0.25px;
+}
+#reviews .div3 p {
+  font-size: 2.5rem;
+}
+#reviews .div4 {
+  grid-area: 2/2/3/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-left: #2e2e45 solid;
+  border-top: #2e2e45 solid;
+  border-width: 0.25px;
+}
+#reviews .div4 p {
+  font-size: 2.5rem;
 }
 
 /* Purchase */
 #purchase {
   width: 100%;
   height: 100%;
+  margin: 20% 0 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+#purchase h1 {
   margin: 0;
   padding: 0;
-  background-color: red;
+  text-align: center;
+  justify-self: flex-start;
+  font-size: 6rem;
+  font-family: "Oooh Baby", cursive;
+  font-weight: 300;
+  opacity: 0.5;
+}
+#purchase p {
+  margin: -5% 0 -5% 0;
+  padding: 5% 0 5% 0;
+  text-align: center;
+  font-size: 2rem;
+  border-bottom: #2e2e45 solid;
+  border-top: #2e2e45 solid;
+  border-width: 2px;
+}
+#purchase p span {
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+#purchase div {
+  margin: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 15px 0 15px;
+  -o-border-image: linear-gradient(to right bottom, #BF953F, #FCF6BA);
+     border-image: linear-gradient(to right bottom, #BF953F, #FCF6BA);
+  border-image-slice: 1;
+  border-style: solid;
+  background-color: #2e2e45;
+}
+#purchase div h2 {
+  font-size: 2rem;
+  background: #BF953F;
+  background: linear-gradient(to right, #BF953F 0%, #fcf6ba 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=style.css.map */

@@ -2,6 +2,7 @@
 $main-color-light: #f1fdfd;
 $second-color-light: #8fd4e0;
 $main-color-dark: #2e2e45;
+$gold: #FFD700;
 
 
 /* Universal Styles */
@@ -129,6 +130,7 @@ html, body {
             margin: 0;
             padding: 0;
 
+            
             font-size: 1.5rem;
             font-weight: 300;
             text-align: center;
@@ -235,7 +237,7 @@ html, body {
         align-self: center;
 
         font-size: 2rem;
-        font-weight: 400;
+        font-weight: 600;
     }
 
     #about--content {
@@ -321,23 +323,92 @@ html, body {
 #reviews {
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 1% 0 0 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     #review--content {
-        width: 100%;
-        height: 100%;
+        width: 60%;
+        height: 80%;
         margin: 0;
         padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 40px;
+        grid-row-gap: 40px;
+
+        #review--content > div {
+            background-color: #2e2e45;
+        }
+    }
+
+    .div1 { 
+        grid-area: 1 / 1 / 2 / 2; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        border-bottom: $main-color-dark solid;
+        border-right: $main-color-dark solid;
+        border-width: .25px;
+
+        p {
+            font-size: 3.5rem;
+            font-family: 'Oooh Baby', cursive;
+            font-weight: 300;
+        }
+    }
+    
+    .div2 { 
+        grid-area: 1 / 2 / 2 / 3; 
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
 
-        img {
-            width: 40%;
-        }
+        border-bottom: $main-color-dark solid;
+        border-left: $main-color-dark solid;
+        border-width: .25px;
 
-       
+        img {
+            width: 392px;
+
+            opacity: .8;
+        }
+    }
+    .div3 { 
+        grid-area: 2 / 1 / 3 / 2; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        border-right: $main-color-dark solid;
+        border-top: $main-color-dark solid;
+        border-width: .25px;
+
+        p {
+            font-size: 2.5rem;
+        }
+    }
+    .div4 { 
+        grid-area: 2 / 2 / 3 / 3; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        border-left: $main-color-dark solid;
+        border-top: $main-color-dark solid;
+        border-width: .25px;
+
+        p {
+            font-size: 2.5rem;
+        }
     }
 }
 
@@ -346,7 +417,58 @@ html, body {
 #purchase {
     width: 100%;
     height: 100%;
-    margin: 0;
+    margin: 20% 0 0 0;
     padding: 0;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    h1 {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        justify-self: flex-start;
+        font-size: 6rem;
+        font-family: 'Oooh Baby', cursive;
+        font-weight: 300;
+        opacity: .5;
+    }
+
+    p {
+        margin: -5% 0 -5% 0;
+        padding: 5% 0 5% 0;
+        text-align: center;
+        font-size: 2rem;
+
+        border-bottom: $main-color-dark solid;
+        border-top: $main-color-dark solid;
+        border-width: 2px;
+
+        span {
+            font-weight: 600;
+            font-size: 2.2rem;
+        }
+    }
+
+    div {
+        margin: 0;
+        width: fit-content;
+        height: fit-content;
+        padding: 0 15px 0 15px;
+
+        border-image: linear-gradient(to right bottom, #BF953F, #FCF6BA);
+        border-image-slice: 1;
+        border-style: solid;
+        background-color: $main-color-dark;
+
+        h2 {
+            font-size: 2rem;
+            background: #BF953F;
+            background: linear-gradient(to right, #BF953F 0%, #fcf6ba 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    
 }

@@ -45,6 +45,7 @@ function showBegText(){
 gsap.registerPlugin(ScrollTrigger);
 
 let sections = gsap.utils.toArray(".scroll .panel");
+
 // Used to measure end
 // and revert back to vertical scroll
 let container = document.querySelector('#container');
@@ -60,3 +61,34 @@ let scrollTween = gsap.to(sections, {
     end: `+=${container.offsetWidth}`
   }
 });
+
+gsap.to("#whiskey", {
+    rotate: 90,
+    x: `+=${container.offsetWidth}`,
+    duration: 1,
+    ease: "none",
+    scrollTrigger: {
+      containerAnimation: scrollTween,
+      trigger: "#about",
+      start: "left right",
+      scrub: 1,
+      pin: true,
+      toggleClass: "active",
+      end: `+=${container.offsetWidth}`
+    }
+  });
+
+  gsap.to("#nav--home", {
+    textDecoration: "underline",
+    duration: 1,
+    scrollTrigger: {
+      containerAnimation: scrollTween,
+      trigger: "#main",
+      start: "left center",
+      end: "right center",
+      scrub: 1,
+      markers: true,
+      toggleClass: "active"
+    }
+  });
+
