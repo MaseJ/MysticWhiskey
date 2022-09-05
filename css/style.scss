@@ -32,7 +32,9 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
-  }
+}
+
+
 
 
 
@@ -81,9 +83,11 @@ html, body {
     background-color: #f1fdfd;
     border-width: 1px;
     
-    p {
+    a {
         margin: 0 3% 0 3%;
 
+        color: $main-color-dark;
+        text-decoration: none;
         font-size: 1.5rem;
         font-weight: 500;
     }
@@ -472,3 +476,4 @@ html, body {
     }
     
 }
+

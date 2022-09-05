@@ -64,8 +64,10 @@ html, body {
   background-color: #f1fdfd;
   border-width: 1px;
 }
-#navbar p {
+#navbar a {
   margin: 0 3% 0 3%;
+  color: #2e2e45;
+  text-decoration: none;
   font-size: 1.5rem;
   font-weight: 500;
 }

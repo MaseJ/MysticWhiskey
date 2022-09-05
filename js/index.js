@@ -76,19 +76,11 @@ gsap.to("#whiskey", {
       toggleClass: "active",
       end: `+=${container.offsetWidth}`
     }
-  });
+  })
+  
 
-  gsap.to("#nav--home", {
-    textDecoration: "underline",
-    duration: 1,
-    scrollTrigger: {
-      containerAnimation: scrollTween,
-      trigger: "#main",
-      start: "left center",
-      end: "right center",
-      scrub: 1,
-      markers: true,
-      toggleClass: "active"
-    }
-  });
+
+  
+
+
 
